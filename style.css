@@ -22,7 +22,7 @@ body {
 }
 
 img {
-  /* max-width: 130px; */
+  min-width: 100px;
   width: 100%;
   height: auto;
 }
@@ -45,14 +45,9 @@ img:active {
 }
 
 .container {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
   height: 100vh;
   width: 70%;
   margin: auto;
-  /* background: var(--light); */
 }
 
 h3 {
@@ -92,7 +87,10 @@ h3 {
 
 .content {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  /* margin: 20px 0; */
+  width: 100%;
+  justify-content: center;
   background: var(--primary);
   height: 20vh;
 }
@@ -113,4 +111,20 @@ h3 {
 
 .hide {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .img-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .roll-container {
+    margin-top: 2rem;
+  }
 }
